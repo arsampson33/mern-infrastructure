@@ -48,3 +48,9 @@ export async function login(userData){
   
   }
   }
+
+  export async function checkToken(){
+    return userAPI.checkToken()
+
+    .then(dateStr => new Date(dateStr))
+  }

@@ -1,7 +1,10 @@
+import { checkToken } from "../utilities/users-service"
+
 export default function OrderHistoryPage (prop){
   
   const handleCheckToken = async (e) => {
-        alert('clicked')
+    const expDate = await checkToken()
+    console.log(expDate)
     }
 
     return(

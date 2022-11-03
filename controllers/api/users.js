@@ -33,10 +33,15 @@ function createJWT(user){
     return jwt.sign({user}, process.env.SECRET, {expiresIn: '24h'})
 }
 
+function checkToken(req,res){
+  console.log('req.user', req.user)
+  res.json(req.exp)
+}
 
 module.exports = {
     create,
-    login
+    login,
+    checkToken
   };
 
  
